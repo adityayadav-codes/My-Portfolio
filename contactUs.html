@@ -1,72 +1,100 @@
-<!DOCTYPE html>
+ 
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Contact Page</title>
-  <style>
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      padding: 30px;
-    }
-    .contact-card {
-      max-width: 500px;
-      margin: auto;
-      background: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-      color: #333;
-    }
-    .info {
-      margin-top: 20px;
-      font-size: 16px;
-    }
-    .info p {
-      margin: 10px 0;
-    }
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-
-      @media screen and (max-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="contact-card">
-    <h2>Contact Me</h2>
-    <div class="info">
-      <p><strong>Name:</strong> Aditya Yadav</p>
-      <p><strong>Email:</strong> <a href="mailto:adityayadav2905@gmail.com">adityayadav2905@gmail.com</a></p>
-      <p><strong>Phone:</strong> +91-7270078812</p>
-      <p><strong>Location:</strong> Lalkuan, Ghaziabad(UP)</p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/adityayadav-codes" target="_blank">github.com/adityayadav-codes</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aditya-yadav-61b542373" target="_blank">linkedin.com/in/aditya-yadav-61b542373</a></p>
-    <p><strong>Insta Account:</strong> <a href="https://www.instagram.com/aditya_yaduvanshii18/#" target="_blank">aditya_yaduvanshii18</a></p>
-    <p><strong>Facebook Account:</strong> <a href="https://www.facebook.com/me/" target="_blank">Golu Ahir</a></p>
-    <p><strong>X Account:</strong> <a href="https://twitter.com/@Aditya_yadav018" target="_blank">Twitter</a></p>
-    </div>
-  </div>
+  <main class="contact-wrap" aria-labelledby="contact-heading">
+    <section class="contact-left" aria-label="Contact form">
+      <div class="header-row">
+        <div>
+          <h2 id="contact-heading">Get in touch</h2>
+          <p class="lead">Have a project or want to say hi? Fill this form or use the contact details.</p>
+        </div>
+
+        <!-- Theme toggle -->
+        <div class="theme-toggle" id="themeToggle" role="button" aria-pressed="false" title="Toggle theme">
+          <svg id="iconMoon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="row">
+          <div class="col">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Aditya Yadav" required />
+            <div class="error" id="errName">Please enter your name.</div>
+          </div>
+          <div class="col">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <div class="error" id="errEmail">Please enter a valid email.</div>
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+          <div class="error" id="errMessage">Please type a message (min 6 characters).</div>
+        </div>
+
+        <div class="row-actions">
+          <div class="note">Prefer email? <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></div>
+          <button type="submit" class="btn" id="submitBtn">Send message</button>
+        </div>
+
+        <div id="responseMsg"></div>
+      </form>
+    </section>
+
+    <!-- Right column -->
+    <aside class="contact-right" aria-label="Contact details">
+      <div class="value">Let's build something ✨</div>
+      <div class="note">I'm usually available for freelance work and collaborations.</div>
+
+      <div class="divider"></div>
+
+      <div class="info-item">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.2a12.1 12.1 0 0 0 7.2 7.2l1.9-1.9a1 1 0 0 1 1-.2c1.1.4 2.3.6 3.5.6a1 1 0 0 1 1 1v2.9a1 1 0 0 1-1 1C9.9 21.6 2.4 14.1 2.4 4a1 1 0 0 1 1-1H6.3a1 1 0 0 1 1 1c0 1.2.2 2.4.7 3.5a1 1 0 0 1-.2 1l-1.2 1.2z" fill="currentColor"/></svg>
+        <div>
+          <div class="meta">Phone</div>
+          <div class="value">+91 7270078812</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
+        <div>
+          <div class="meta">Location</div>
+          <div class="value">Ghaziabad, India</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <svg viewBox="0 0 24 24"><path d="M3 6.5v11A2.5 2.5 0 0 0 5.5 20h13a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 18.5 4h-13A2.5 2.5 0 0 0 3 6.5zM5 7.2l7 4.5 7-4.5" fill="currentColor"/></svg>
+        <div>
+          <div class="meta">Email</div>
+          <div class="value">adityayadav2905@gmail.com</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="note">Follow me</div>
+      <div class="socials">
+        <a href="https://github.com/adityayadav-codes" aria-label="GitHub">GitHub</a>
+        <a href="https://linkedin.com/in/aditya-yadav-61b542373" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://twitter.com/@Aditya_yadav018" aria-label="Twitter">Twitter</a>
+      </div>
+    </aside>
+  </main>
+  <script src="script.js"></script>
 </body>
-</html>
+</html>   
