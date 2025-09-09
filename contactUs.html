@@ -24,7 +24,8 @@
       </div>
 
       <!-- Contact form -->
-      <form id="contactForm" class="contact-form" novalidate>
+      <form action="https://api.web3forms.com/submit" method="POST"id="contactForm" class="contact-form" novalidate>
+        <input type="hidden" name="access_key" value="02c94be9-e776-462a-b8fc-5bd0891c819f">
         <div class="row">
           <div class="col">
             <label for="name">Your name</label>
@@ -37,6 +38,7 @@
             <div class="error" id="errEmail">Please enter a valid email.</div>
           </div>
         </div>
+        
 
         <div>
           <label for="message">Message</label>
