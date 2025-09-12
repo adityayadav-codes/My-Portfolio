@@ -1,0 +1,182 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Container */
+.cv-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 900px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Left column */
+.left-column {
+  border-right: 2px solid #fff;
+  padding: 20px;
+  text-align: center;
+  background: #8f7149;
+  color: #fff;
+}
+
+.profile-pic img {
+  border: #fff solid 3px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.left-column h1 {
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.role {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.left-column h2 {
+  margin-top: 20px;
+  font-size: 18px;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.left-column p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* Right column */
+.right-column {
+  background: #111;
+  color: #fff;
+  padding: 25px;
+}
+
+.right-column h2 {
+  font-size: 18px;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.right-column p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Blocks inside right column */
+.block {
+ 
+  margin-bottom: 30px;
+}
+
+/* Divider between About/Skills and Education/Projects */
+.right-divider {
+  height: 3px;
+  background: #fff;
+  margin: 50px 0;
+  border-radius: 0px;
+}
+
+/* Skills */
+.skill {
+  margin-bottom: 15px;
+}
+.skill span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.bar {
+  background: #444;
+  border-radius: 5px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+}
+.fill {
+  background: #e74c3c;
+  height: 8px;
+  border-radius: 5px;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Education & Projects */
+.project{
+  border: #000 solid 3px ;
+  
+
+}
+.edu, .project {
+  margin-bottom: 15px;
+}
+.edu h3, .project h3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.edu p, .project p {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.acc{
+  text-align: left;
+}
+h1{
+  font-weight: bold;
+  color: #000;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+  }
+  .left-column {
+    border-right: none;
+    border-bottom: 2px solid #fff;
+  }
+  .profile-pic img {
+    max-width: 250px;
+    margin: auto;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .left-column h1 {
+    font-size: 22px;
+  }
+  .role {
+    font-size: 14px;
+  }
+  .right-column h2 {
+    font-size: 16px;
+  }
+  .right-column p,
+  .skill span,
+  .edu h3,
+  .project h3 {
+    font-size: 12px;
+  }
+}
